@@ -107,7 +107,7 @@ function PlasmicHomepage__RenderFunc(props) {
                       projectcss.__wab_text,
                       sty.link__cKLb9
                     )}
-                    href={`/details-page/[id]`}
+                    href={`/Homepage`}
                   >
                     {"Home"}
                   </a>
@@ -238,7 +238,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             projectcss.__wab_text,
                             sty.link___7J5EK
                           )}
-                          href={`/details-page/${(() => {
+                          href={`/about-page/${(() => {
                             try {
                               return currentItem.id;
                             } catch (e) {

@@ -87,19 +87,6 @@
           "componentType": "page"
         },
         {
-          "id": "ZH_y0uWWc-",
-          "name": "DetailsPage",
-          "type": "managed",
-          "projectId": "dGsUhjZME7GZHL9mJLmwh9",
-          "renderModuleFilePath": "plasmic/hello_world_project/PlasmicDetailsPage.jsx",
-          "importSpec": {
-            "modulePath": "DetailsPage.jsx"
-          },
-          "cssFilePath": "plasmic/hello_world_project/PlasmicDetailsPage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "-YA3oXbgpP1",
           "name": "Button",
           "type": "managed",
@@ -112,6 +99,19 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "button"
+        },
+        {
+          "id": "ZH_y0uWWc-",
+          "name": "About",
+          "type": "managed",
+          "projectId": "dGsUhjZME7GZHL9mJLmwh9",
+          "renderModuleFilePath": "plasmic/hello_world_project/PlasmicAbout.jsx",
+          "importSpec": {
+            "modulePath": "About.jsx"
+          },
+          "cssFilePath": "plasmic/hello_world_project/PlasmicAbout.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
