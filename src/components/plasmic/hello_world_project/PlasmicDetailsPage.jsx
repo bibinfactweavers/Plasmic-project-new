@@ -65,7 +65,18 @@ function PlasmicDetailsPage__RenderFunc(props) {
             dataName={"fetchedData"}
             errorDisplay={
               <ph.DataCtxReader>
-                {$ctx => "Error fetching data"}
+                {$ctx =>
+                  (() => {
+                    try {
+                      return undefined;
+                    } catch (e) {
+                      if (e instanceof TypeError) {
+                        return "Error fetching data";
+                      }
+                      throw e;
+                    }
+                  })()
+                }
               </ph.DataCtxReader>
             }
             headers={{
