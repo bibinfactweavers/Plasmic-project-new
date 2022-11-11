@@ -147,15 +147,15 @@
   min-width: 0;
   padding: 8px;
 }
-.img {
+.img___7UfKm {
   position: relative;
   object-fit: cover;
   max-width: 100%;
 }
-.img > picture > img {
+.img___7UfKm > picture > img {
   object-fit: cover;
 }
-.img > :global(.__wab_img-spacer) > img {
+.img___7UfKm > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .link___7J5EK {

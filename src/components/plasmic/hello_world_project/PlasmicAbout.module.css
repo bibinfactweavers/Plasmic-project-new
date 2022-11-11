@@ -8,14 +8,29 @@
   align-items: center;
   padding-right: 0px;
   padding-top: 28px;
+  transition-property: all;
+  transition-duration: 1s;
   min-width: 0;
   min-height: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+}
+.freeBox___2PrWb {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
 }
 .button:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
 }
-.svg___0TAic {
+.svg__sl33 {
   position: relative;
   object-fit: cover;
   width: 1em;
@@ -24,7 +39,7 @@
 .text__fxQc8 {
   color: #ededec;
 }
-.svg__vMhQl {
+.svg__sjT2I {
   position: relative;
   object-fit: cover;
   width: 1em;
@@ -61,7 +76,7 @@
   min-width: 0;
   padding: 8px;
 }
-.img {
+.img__z1G0N {
   object-fit: cover;
   max-width: 100%;
   width: 251px;
@@ -69,16 +84,15 @@
   height: 267px;
   flex-shrink: 0;
 }
-.img > picture > img {
+.img__z1G0N > picture > img {
   object-fit: cover;
   object-position: center center;
 }
-.img > :global(.__wab_img-spacer) > img {
+.img__z1G0N > :global(.__wab_img-spacer) > img {
   object-fit: cover;
   object-position: center center;
 }
 .text__woEfJ {
-  position: relative;
   width: 100%;
   height: auto;
   max-width: 247px;
@@ -86,7 +100,40 @@
   font-family: "Inder", sans-serif;
   font-size: 44px;
   padding-left: 0px;
-  margin-right: 0px;
   padding-right: 0px;
   min-width: 0;
+}
+.freeBox__sTLgI {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-right: 0px;
+  min-width: 0;
+  padding: 8px;
+}
+.slider:global(.__wab_instance) {
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  object-fit: cover;
+  position: relative;
+  min-width: 0;
+}
+.img__agxbF {
+  object-fit: cover;
+  max-width: 100%;
+  object-position: center bottom;
+}
+.img__agxbF > picture > img {
+  object-fit: cover;
+  object-position: center bottom;
+}
+.img__agxbF > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+  object-position: center bottom;
 }

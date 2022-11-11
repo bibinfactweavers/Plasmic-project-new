@@ -79,7 +79,16 @@ function PlasmicHomepage__RenderFunc(props) {
                     displayMinHeight={"0"}
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
-                    src={"https://static1.plasmic.app/nav-logo-placeholder.svg"}
+                    src={(() => {
+                      try {
+                        return undefined;
+                      } catch (e) {
+                        if (e instanceof TypeError) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </a>
               }
@@ -208,10 +217,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         key={currentIndex}
                       >
                         <p.PlasmicImg
-                          data-plasmic-name={"img"}
-                          data-plasmic-override={overrides.img}
                           alt={""}
-                          className={classNames(sty.img)}
+                          className={classNames(sty.img___7UfKm)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -274,12 +281,11 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "navigationBar", "h1", "httpApiFetcher", "img"],
-  section: ["section", "navigationBar", "h1", "httpApiFetcher", "img"],
+  root: ["root", "section", "navigationBar", "h1", "httpApiFetcher"],
+  section: ["section", "navigationBar", "h1", "httpApiFetcher"],
   navigationBar: ["navigationBar"],
   h1: ["h1"],
-  httpApiFetcher: ["httpApiFetcher", "img"],
-  img: ["img"]
+  httpApiFetcher: ["httpApiFetcher"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -319,7 +325,6 @@ export const PlasmicHomepage = Object.assign(
     navigationBar: makeNodeComponent("navigationBar"),
     h1: makeNodeComponent("h1"),
     httpApiFetcher: makeNodeComponent("httpApiFetcher"),
-    img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,

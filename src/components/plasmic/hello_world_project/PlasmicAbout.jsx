@@ -18,6 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import Button from "../../Button"; // plasmic-import: -YA3oXbgpP1/component
 import { DataFetcher } from "@plasmicpkgs/plasmic-query"; // plasmic-import: ae7V86eNoXA/codeComponent
+import Slider from "react-slick"; // plasmic-import: HOQUyOpClJ/codeComponent
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_hello_world_project.module.css"; // plasmic-import: dGsUhjZME7GZHL9mJLmwh9/projectcss
 import sty from "./PlasmicAbout.module.css"; // plasmic-import: ZH_y0uWWc-/css
@@ -51,23 +52,27 @@ function PlasmicAbout__RenderFunc(props) {
             sty.root
           )}
         >
-          <Button
-            data-plasmic-name={"button"}
-            data-plasmic-override={overrides.button}
-            className={classNames("__wab_instance", sty.button)}
-            color={"blue"}
-            link={`/Homepage`}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__fxQc8
-              )}
-            >
-              {"Back"}
+          {true ? (
+            <div className={classNames(projectcss.all, sty.freeBox___2PrWb)}>
+              <Button
+                data-plasmic-name={"button"}
+                data-plasmic-override={overrides.button}
+                className={classNames("__wab_instance", sty.button)}
+                color={"blue"}
+                link={`/Homepage`}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__fxQc8
+                  )}
+                >
+                  {"Back"}
+                </div>
+              </Button>
             </div>
-          </Button>
+          ) : null}
 
           <DataFetcher
             data-plasmic-name={"httpApiFetcher"}
@@ -124,10 +129,8 @@ function PlasmicAbout__RenderFunc(props) {
                         )}
                       >
                         <p.PlasmicImg
-                          data-plasmic-name={"img"}
-                          data-plasmic-override={overrides.img}
                           alt={""}
-                          className={classNames(sty.img)}
+                          className={classNames(sty.img__z1G0N)}
                           displayHeight={"267px"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -165,6 +168,57 @@ function PlasmicAbout__RenderFunc(props) {
                             }
                           })()}
                         </div>
+
+                        {true ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__sTLgI
+                            )}
+                          />
+                        ) : null}
+
+                        <Slider
+                          data-plasmic-name={"slider"}
+                          data-plasmic-override={overrides.slider}
+                          autoplay={true}
+                          autoplaySpeed={2000}
+                          centerMode={true}
+                          className={classNames("__wab_instance", sty.slider)}
+                        >
+                          {(() => {
+                            try {
+                              return $ctx.fetchedData.images;
+                            } catch (e) {
+                              if (e instanceof TypeError) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })().map((currentItem, currentIndex) => (
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__agxbF)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              key={currentIndex}
+                              src={(() => {
+                                try {
+                                  return currentItem;
+                                } catch (e) {
+                                  if (e instanceof TypeError) {
+                                    return undefined;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            />
+                          ))}
+                        </Slider>
                       </div>
                     ) : null}
                   </div>
@@ -179,10 +233,10 @@ function PlasmicAbout__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "button", "httpApiFetcher", "img"],
+  root: ["root", "button", "httpApiFetcher", "slider"],
   button: ["button"],
-  httpApiFetcher: ["httpApiFetcher", "img"],
-  img: ["img"]
+  httpApiFetcher: ["httpApiFetcher", "slider"],
+  slider: ["slider"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -220,7 +274,7 @@ export const PlasmicAbout = Object.assign(
     // Helper components rendering sub-elements
     button: makeNodeComponent("button"),
     httpApiFetcher: makeNodeComponent("httpApiFetcher"),
-    img: makeNodeComponent("img"),
+    slider: makeNodeComponent("slider"),
     // Metadata about props expected for PlasmicAbout
     internalVariantProps: PlasmicAbout__VariantProps,
     internalArgProps: PlasmicAbout__ArgProps,
