@@ -128,6 +128,25 @@ function PlasmicAbout__RenderFunc(props) {
                           sty.freeBox___6LPwt
                         )}
                       >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__woEfJ
+                          )}
+                        >
+                          {(() => {
+                            try {
+                              return $ctx.fetchedData.title;
+                            } catch (e) {
+                              if (e instanceof TypeError) {
+                                return "Enter some text";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </div>
+
                         <p.PlasmicImg
                           alt={""}
                           className={classNames(sty.img__z1G0N)}
@@ -154,12 +173,12 @@ function PlasmicAbout__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__woEfJ
+                            sty.text___6Tafe
                           )}
                         >
                           {(() => {
                             try {
-                              return $ctx.fetchedData.title;
+                              return $ctx.fetchedData.description;
                             } catch (e) {
                               if (e instanceof TypeError) {
                                 return "Enter some text";
@@ -173,52 +192,62 @@ function PlasmicAbout__RenderFunc(props) {
                           <div
                             className={classNames(
                               projectcss.all,
-                              sty.freeBox__sTLgI
+                              sty.freeBox__enmgD
                             )}
-                          />
-                        ) : null}
-
-                        <Slider
-                          data-plasmic-name={"slider"}
-                          data-plasmic-override={overrides.slider}
-                          autoplay={true}
-                          autoplaySpeed={2000}
-                          centerMode={true}
-                          className={classNames("__wab_instance", sty.slider)}
-                        >
-                          {(() => {
-                            try {
-                              return $ctx.fetchedData.images;
-                            } catch (e) {
-                              if (e instanceof TypeError) {
-                                return [];
-                              }
-                              throw e;
-                            }
-                          })().map((currentItem, currentIndex) => (
-                            <p.PlasmicImg
-                              alt={""}
-                              className={classNames(sty.img__agxbF)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              key={currentIndex}
-                              src={(() => {
+                          >
+                            <Slider
+                              data-plasmic-name={"slider"}
+                              data-plasmic-override={overrides.slider}
+                              adaptiveHeight={false}
+                              autoplay={true}
+                              autoplaySpeed={2000}
+                              centerMode={true}
+                              centerPadding={"0"}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.slider
+                              )}
+                              dots={true}
+                              focusOnSelect={true}
+                              pauseOnHover={false}
+                              swipe={false}
+                              touchMove={false}
+                            >
+                              {(() => {
                                 try {
-                                  return currentItem;
+                                  return $ctx.fetchedData.images;
                                 } catch (e) {
                                   if (e instanceof TypeError) {
-                                    return undefined;
+                                    return [];
                                   }
                                   throw e;
                                 }
-                              })()}
-                            />
-                          ))}
-                        </Slider>
+                              })().map((currentItem, currentIndex) => (
+                                <p.PlasmicImg
+                                  alt={""}
+                                  className={classNames(sty.img__agxbF)}
+                                  displayHeight={"745px"}
+                                  displayMaxHeight={"none"}
+                                  displayMaxWidth={"100%"}
+                                  displayMinHeight={"0"}
+                                  displayMinWidth={"0"}
+                                  displayWidth={"100px"}
+                                  key={currentIndex}
+                                  src={(() => {
+                                    try {
+                                      return currentItem;
+                                    } catch (e) {
+                                      if (e instanceof TypeError) {
+                                        return undefined;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                />
+                              ))}
+                            </Slider>
+                          </div>
+                        ) : null}
                       </div>
                     ) : null}
                   </div>

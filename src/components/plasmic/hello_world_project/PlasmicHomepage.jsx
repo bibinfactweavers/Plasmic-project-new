@@ -73,7 +73,7 @@ function PlasmicHomepage__RenderFunc(props) {
                   <p.PlasmicImg
                     alt={""}
                     className={classNames(sty.img__kRB)}
-                    displayHeight={"40px"}
+                    displayHeight={"73px"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={"none"}
                     displayMinHeight={"0"}
@@ -81,7 +81,7 @@ function PlasmicHomepage__RenderFunc(props) {
                     displayWidth={"auto"}
                     src={(() => {
                       try {
-                        return undefined;
+                        return "https://cdn.pixabay.com/photo/2022/01/17/22/20/subtract-6945896_960_720.png";
                       } catch (e) {
                         if (e instanceof TypeError) {
                           return undefined;
@@ -195,7 +195,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 }
                 method={"GET"}
                 noLayout={false}
-                url={"https://dummyjson.com/products"}
+                url={"https://dummyjson.com/products?limit=5"}
               >
                 <ph.DataCtxReader>
                   {$ctx =>
@@ -272,6 +272,84 @@ function PlasmicHomepage__RenderFunc(props) {
                   }
                 </ph.DataCtxReader>
               </DataFetcher>
+            </div>
+
+            <div className={classNames(projectcss.all, sty.freeBox___3WWri)}>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__frej)}
+              >
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__wL8Fh)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={
+                    "https://plasmic-ray.s3.us-west-2.amazonaws.com/logo-loom.svg"
+                  }
+                />
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__bpKl3)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={
+                    "https://plasmic-ray.s3.us-west-2.amazonaws.com/logo-strapi.svg"
+                  }
+                />
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__mdloE)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={
+                    "https://plasmic-ray.s3.us-west-2.amazonaws.com/logo-segment.svg"
+                  }
+                />
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__rGSnG)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={
+                    "https://plasmic-ray.s3.us-west-2.amazonaws.com/logo-xstate.svg"
+                  }
+                />
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__efqEf)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={
+                    "https://plasmic-ray.s3.us-west-2.amazonaws.com/logo-mapbox.svg"
+                  }
+                />
+              </p.Stack>
             </div>
           </p.Stack>
         </div>
